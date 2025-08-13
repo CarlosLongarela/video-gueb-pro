@@ -57,10 +57,10 @@ p {
     animation: float 12s infinite linear;
 }
 
-.circle1 { width: 220px; height: 220px; background: #5c5cff; left: 5%; top: 10%; animation-delay: 0s; }
-.circle2 { width: 160px; height: 160px; background: #00e0ff; right: 8%; top: 30%; animation-delay: 2s; }
-.circle3 { width: 120px; height: 120px; background: #ff5c8d; left: 20%; bottom: 12%; animation-delay: 4s; }
-.circle4 { width: 90px; height: 90px; background: #ffe05c; right: 18%; bottom: 18%; animation-delay: 6s; }
+.circle1 { width: 220px; height: 220px; background: #00ffe7; animation-delay: 0s; }
+.circle2 { width: 160px; height: 160px; background: #ff6bff; animation-delay: 2s; }
+.circle3 { width: 120px; height: 120px; background: #ffe05c; animation-delay: 4s; }
+.circle4 { width: 90px; height: 90px; background: #5cff7a; animation-delay: 6s; }
 
 @keyframes float {
     0% { transform: translateY(0) scale(1); }
@@ -108,7 +108,9 @@ p {
 @media (max-width: 600px) {
     .container {
         padding: 32px 10px;
-        max-width: 98vw;
+        max-width: calc(100vw - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
     }
     h1 {
         font-size: 1.5rem;
