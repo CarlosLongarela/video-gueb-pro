@@ -1,0 +1,120 @@
+body {
+    background: linear-gradient(135deg, #18181b 0%, #23232a 100%);
+    color: #f4f4f5;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(35,35,42,0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    padding: 56px 40px;
+    text-align: center;
+    max-width: 440px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+    color: #e0e0e6;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.15rem;
+    color: #b3b3bb;
+    margin-bottom: 0;
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+    animation: float 12s infinite linear;
+}
+
+.circle1 { width: 220px; height: 220px; background: #5c5cff; left: 5%; top: 10%; animation-delay: 0s; }
+.circle2 { width: 160px; height: 160px; background: #00e0ff; right: 8%; top: 30%; animation-delay: 2s; }
+.circle3 { width: 120px; height: 120px; background: #ff5c8d; left: 20%; bottom: 12%; animation-delay: 4s; }
+.circle4 { width: 90px; height: 90px; background: #ffe05c; right: 18%; bottom: 18%; animation-delay: 6s; }
+
+@keyframes float {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-40px) scale(1.08); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+.btn {
+    margin-top: 32px;
+    padding: 12px 32px;
+    background: linear-gradient(90deg,#5c5cff,#00e0ff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg,#00e0ff,#5c5cff);
+    transform: scale(1.05);
+}
+
+.wp {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    color: #5c5cff;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.wp svg {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 32px 10px;
+        max-width: 98vw;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .logo {
+        width: 56px;
+        height: 56px;
+    }
+}

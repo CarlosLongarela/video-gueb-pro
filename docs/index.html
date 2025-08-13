@@ -1,1 +1,39 @@
-<h1>Video Gueb home page</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>gueb.pro - Desarrollo</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="animated-bg">
+		<div class="circle circle1"></div>
+		<div class="circle circle2"></div>
+		<div class="circle circle3"></div>
+		<div class="circle circle4"></div>
+	</div>
+	<div class="container">
+		<span class="logo">
+			<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="40" cy="40" r="36" stroke="#5c5cff" stroke-width="6" fill="#23232a"/>
+				<path d="M24 56L40 24L56 56" stroke="#00e0ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+				<circle cx="40" cy="40" r="8" fill="#5c5cff"/>
+			</svg>
+		</span>
+		<h1>gueb.pro</h1>
+		<p>Página de inicio para desarrollo y programación.<br>Proyectos WordPress.</p>
+		<button class="btn" onclick="window.open('https://github.com/CarlosLongarela/video-gueb-pro','_blank')">Ver en GitHub</button>
+		<div class="wp">
+			<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#5c5cff" stroke-width="2"/><path d="M7 9.5l2.5 7L12 9.5l2.5 7L17 9.5" stroke="#00e0ff" stroke-width="1.5"/></svg>
+			WordPress Dev
+		</div>
+	</div>
+	<script>
+	// Animación de círculos flotantes
+	document.querySelectorAll('.circle').forEach(function(el, i) {
+		el.style.animationDuration = (10 + i * 2) + 's';
+	});
+	</script>
+</body>
+</html>
