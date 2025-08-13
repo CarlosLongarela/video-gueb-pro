@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>gueb.pro - Desarrollo</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/script.js" defer></script>
 </head>
 <body>
 	<div class="animated-bg">
@@ -15,78 +16,16 @@
 	</div>
 	<div class="container">
 		<span class="logo">
-			<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<circle cx="40" cy="40" r="36" stroke="#5c5cff" stroke-width="6" fill="#23232a"/>
-				<path d="M24 56L40 24L56 56" stroke="#00e0ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-				<circle cx="40" cy="40" r="8" fill="#5c5cff"/>
-			</svg>
+			<img src="./img/wp-icon.svg" alt="WordPress Icon" width="80" height="80"/>
 		</span>
 		<h1>gueb.pro</h1>
 		<p>Página de inicio para desarrollo y programación.</p>
 		<p>Proyectos WordPress.</p>
 		<button class="btn" onclick="window.open('https://github.com/CarlosLongarela/video-gueb-pro','_blank')">Ver en GitHub</button>
 		<div class="wp">
-			<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#5c5cff" stroke-width="2"/><path d="M7 9.5l2.5 7L12 9.5l2.5 7L17 9.5" stroke="#00e0ff" stroke-width="1.5"/></svg>
+			<img src="./img/wp-icon.svg" alt="WordPress Icon" width="20" height="20"/>
 			WordPress Dev
 		</div>
 	</div>
-	<script>
-	// Animación avanzada de círculos flotantes y rebote
-	const colorPalette = [
-		'#00ffe7', '#ff6bff', '#ffe05c', '#5cff7a', '#ff5c5c', '#5c5cff', '#00e0ff', '#ffb700', '#00ff8c', '#ff00c8'
-	];
-	const circles = [
-		{ el: document.querySelector('.circle1') },
-		{ el: document.querySelector('.circle2') },
-		{ el: document.querySelector('.circle3') },
-		{ el: document.querySelector('.circle4') }
-	];
-
-	// Asignar tamaño y color aleatorio a cada círculo
-	circles.forEach((c, i) => {
-		c.size = Math.floor(Math.random() * 160) + 60; // entre 60 y 220 px
-		c.color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
-		c.el.style.width = c.size + 'px';
-		c.el.style.height = c.size + 'px';
-		c.el.style.background = c.color;
-		c.el.style.boxShadow = `0 0 60px 10px ${c.color}`;
-	});
-
-	circles.forEach((c, i) => {
-		c.x = Math.random() * (window.innerWidth - c.size);
-		c.y = Math.random() * (window.innerHeight - c.size);
-		c.vx = (Math.random() * 2.5 + 1.5) * (Math.random() > 0.5 ? 1 : -1); // velocidad mayor
-		c.vy = (Math.random() * 2.5 + 1.5) * (Math.random() > 0.5 ? 1 : -1);
-		c.el.style.background = c.color;
-		c.el.style.boxShadow = `0 0 60px 10px ${c.color}`;
-	});
-
-	function animateCircles() {
-		circles.forEach((c) => {
-			c.x += c.vx;
-			c.y += c.vy;
-			// Rebote en bordes
-			if (c.x <= 0 || c.x >= window.innerWidth - c.size) {
-				c.vx *= -1;
-				c.x = Math.max(0, Math.min(c.x, window.innerWidth - c.size));
-			}
-			if (c.y <= 0 || c.y >= window.innerHeight - c.size) {
-				c.vy *= -1;
-				c.y = Math.max(0, Math.min(c.y, window.innerHeight - c.size));
-			}
-			// Mantener velocidad constante
-			c.el.style.left = c.x + 'px';
-			c.el.style.top = c.y + 'px';
-		});
-		requestAnimationFrame(animateCircles);
-	}
-	animateCircles();
-	window.addEventListener('resize', () => {
-		circles.forEach((c) => {
-			c.x = Math.max(0, Math.min(c.x, window.innerWidth - c.size));
-			c.y = Math.max(0, Math.min(c.y, window.innerHeight - c.size));
-		});
-	});
-	</script>
 </body>
 </html>
